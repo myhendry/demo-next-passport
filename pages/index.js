@@ -3,9 +3,8 @@ import Head from "next/head";
 import Layout from "../components/layout";
 import { useUser } from "../lib/hooks";
 
-export default function Home() {
+const Index = () => {
   const [user] = useUser();
-  console.log(user);
 
   return (
     <Layout>
@@ -17,4 +16,6 @@ export default function Home() {
       {user && <p>Hello {user.name}</p>}
     </Layout>
   );
-}
+};
+
+export default Index;

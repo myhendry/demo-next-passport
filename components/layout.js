@@ -30,11 +30,13 @@ const AuthLinks = ({ handleSignOut }) => (
         Home
       </a>
     </Link>
-    <button onClick={handleSignOut}>Sign Out</button>
+    <button onClick={handleSignOut} className="text-red-600">
+      Sign Out
+    </button>
   </>
 );
 
-export default function Layout({ children }) {
+const Layout = ({ children }) => {
   const [user, { mutate }] = useUser();
   const handleSignOut = async () => {
     await fetch("/api/auth", {
@@ -57,4 +59,6 @@ export default function Layout({ children }) {
       <main className="my-3 mx-12">{children}</main>
     </div>
   );
-}
+};
+
+export default Layout;
