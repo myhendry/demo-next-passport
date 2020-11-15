@@ -5,7 +5,8 @@ import axios from "axios";
 
 import Layout from "../components/layout";
 
-const Index = () => {
+const Index = ({ todos }) => {
+  console.log(todos);
   return (
     <Layout>
       <Head>
@@ -26,8 +27,10 @@ todos.map((t) => (
   );
 };
 
-// export const getStaticProps = async () => {
-//   return {};
-// };
+export const getStaticProps = async () => {
+  const res = await axios.get("/api/secure");
+  const todos = res.data;
+  return { props: { todos } };
+};
 
 export default Index;
