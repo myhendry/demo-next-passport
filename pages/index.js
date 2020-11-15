@@ -13,12 +13,11 @@ const Index = ({ todos }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <div>
-        test
+      <div className="max-w-sm border border-solid border-teal-700 rounded p-3 m-2 shadow-outline-gray">
         {todos &&
           todos.map((t) => (
-            <div key={t._id} className="bg-teal-500 rounded p-5 my-2">
-              <p>{t.title}</p>
+            <div key={t._id} className="bg-teal-500 rounded p-2 my-2">
+              <p className="text-white">{t.title}</p>
             </div>
           ))}
       </div>
