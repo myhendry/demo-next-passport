@@ -13,7 +13,7 @@ handler.get(async (req, res) => {
       email: "ohendry@email.com",
     })
     .then(({ ops }) => ops[0]);
-  console.log(user);
+
   res.status(201).send("Done");
 });
 

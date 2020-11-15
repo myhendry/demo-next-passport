@@ -9,7 +9,7 @@ const handler = nc();
 //! For Global Middlewares
 const base = nc().use(middleware);
 //! Route Specific Middlewares
-const auth = nc().post("api/secure", authenticate);
+const auth = nc().post("/api/secure", authenticate);
 
 handler
   .use(base)
@@ -17,7 +17,7 @@ handler
   .get(async (req, res) => {
     try {
       const todos = await req.db.collection("todos").find({}).toArray();
-      res.status(200).send(todos);
+      res.status(200).json(todos);
     } catch (err) {
       console.log(err);
       res.status(500).json({ msg: "Server Error" });
