@@ -10,6 +10,11 @@ const UnAuthLinks = () => (
         Home
       </a>
     </Link>
+    <Link href="/pokemon">
+      <a className="no-underline text-green-600 uppercase tracking-wide font-bold text-xs py-3 mr-8 cursor-pointer hover:text-green-400">
+        Pokemon
+      </a>
+    </Link>
     <Link href="/signin">
       <a className="no-underline text-green-600 uppercase tracking-wide font-bold text-xs py-3 mr-8 cursor-pointer hover:text-green-400">
         Member
@@ -23,6 +28,11 @@ const AuthLinks = ({ handleSignOut }) => (
     <Link href="/">
       <a className="no-underline text-green-600 uppercase tracking-wide font-bold text-xs py-3 mr-8 cursor-pointer hover:text-green-400">
         Home
+      </a>
+    </Link>
+    <Link href="/pokemon">
+      <a className="no-underline text-green-600 uppercase tracking-wide font-bold text-xs py-3 mr-8 cursor-pointer hover:text-green-400">
+        Pokemon
       </a>
     </Link>
     <Link href="/auth/protected">
