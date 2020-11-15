@@ -18,7 +18,7 @@ const Index = ({ todos }) => {
         {todos &&
           todos.map((t) => (
             <div key={t._id} className="bg-teal-500 rounded p-5 my-2">
-              <p>{t.name}</p>
+              <p>{t.title}</p>
             </div>
           ))}
       </div>
