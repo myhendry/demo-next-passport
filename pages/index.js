@@ -6,7 +6,6 @@ import axios from "axios";
 import Layout from "../components/layout";
 
 const Index = ({ todos }) => {
-  console.log(todos);
   return (
     <Layout>
       <Head>
@@ -16,12 +15,12 @@ const Index = ({ todos }) => {
 
       <div>
         test
-        {/* {todos &&
-todos.map((t) => (
+        {todos &&
+          todos.map((t) => (
             <div key={t._id} className="bg-teal-500 rounded p-5 my-2">
               <p>{t.name}</p>
             </div>
-          ))} */}
+          ))}
       </div>
     </Layout>
   );
