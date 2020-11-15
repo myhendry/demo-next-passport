@@ -1,9 +1,11 @@
+import React from "react";
+
 import Head from "next/head";
 import axios from "axios";
 
 import Layout from "../components/layout";
 
-const Index = ({ todos }) => {
+const Index = () => {
   return (
     <Layout>
       <Head>
@@ -12,21 +14,20 @@ const Index = ({ todos }) => {
       </Head>
 
       <div>
-        {todos &&
-          todos.map((t) => (
+        test
+        {/* {todos &&
+todos.map((t) => (
             <div key={t._id} className="bg-teal-500 rounded p-5 my-2">
-              <p>{t.title}</p>
+              <p>{t.name}</p>
             </div>
-          ))}
+          ))} */}
       </div>
     </Layout>
   );
 };
 
-export const getStaticProps = async () => {
-  const res = await axios.get("/api/secure");
-  const todos = await res.data;
-  return { props: { todos } };
-};
+// export const getStaticProps = async () => {
+//   return {};
+// };
 
 export default Index;
