@@ -1,4 +1,5 @@
 import Head from "next/head";
+import axios from "axios";
 
 import Layout from "../components/layout";
 
@@ -23,10 +24,8 @@ const Index = ({ todos }) => {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/secure", {
-    method: "GET",
-  });
-  const todos = await res.json();
+  const res = await axios.get("/api/secure");
+  const todos = await res.data;
   return { props: { todos } };
 };
 
