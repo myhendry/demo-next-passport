@@ -10,7 +10,7 @@ handler.use(middleware);
 handler
   .post(passport.authenticate("local"), (req, res) => {
     // return our user object
-    res.json({ user: extractUser(req.user) });
+    res.json({ user: extractUser(req) });
   })
   .delete((req, res) => {
     req.logOut();

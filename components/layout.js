@@ -12,12 +12,7 @@ const UnAuthLinks = () => (
     </Link>
     <Link href="/signin">
       <a className="no-underline text-green-600 uppercase tracking-wide font-bold text-xs py-3 mr-8 cursor-pointer hover:text-green-400">
-        Sign In
-      </a>
-    </Link>
-    <Link href="/signup">
-      <a className="no-underline text-green-600 uppercase tracking-wide font-bold text-xs py-3 mr-8 cursor-pointer hover:text-green-400">
-        Sign Up
+        Member
       </a>
     </Link>
   </>
