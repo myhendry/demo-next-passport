@@ -30,7 +30,15 @@ const AuthLinks = ({ handleSignOut }) => (
         Home
       </a>
     </Link>
-    <button onClick={handleSignOut} className="text-red-600">
+    <Link href="/auth/protected">
+      <a className="no-underline text-green-600 uppercase tracking-wide font-bold text-xs py-3 mr-8 cursor-pointer hover:text-green-400">
+        Protected
+      </a>
+    </Link>
+    <button
+      onClick={handleSignOut}
+      className="bg-red-600 rounded px-2 text-white text-sm shadow-md cursor-pointer hover:bg-red-700"
+    >
       Sign Out
     </button>
   </>
